@@ -78,7 +78,7 @@ pipeline {
              
             steps {
                  
-                sh "ansible-playbook file.yml -i /etc/ansible/file.yml  --user ec2-user "
+                sh "ansible-playbook /etc/ansible/kube_deploy.yml"
 }
 }
     }
