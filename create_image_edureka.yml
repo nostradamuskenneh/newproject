@@ -1,0 +1,9 @@
+---
+- hosts: ansible
+  tasks:
+  - name: create docker image
+    command: docker build -t edu-project-reka .
+  - name: create tag to push image to docker hub
+    command: docker tag edu-project-reka  oumarkenneh/edu-project-reka
+  - name: push docker image
+    command: docker push oumarkenneh/edu-project-reka

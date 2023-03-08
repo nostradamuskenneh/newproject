@@ -1,0 +1,14 @@
+---
+- name: Create a file
+  hosts: server1
+  become: true
+  tasks:
+    - name: Create a file with content
+      file:
+        path: /home/ansible-slave/example212.txt
+        state: touch
+        mode: '0644'
+        owner: ansible-slave
+        group: ansible-slave
+        content: |
+          This is some example text that will be written to the file.

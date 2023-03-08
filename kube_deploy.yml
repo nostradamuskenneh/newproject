@@ -1,0 +1,9 @@
+---
+- hosts: kubernetes
+  user: root
+  tasks: 
+
+  - name: deploy edureka app
+    command: kubectl apply -f /home/oumar/edureka-deploy.yml
+    command: kubectl apply -f /home/oumar/service.edureka.yml
+

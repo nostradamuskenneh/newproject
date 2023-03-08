@@ -1,0 +1,102 @@
+Last login: Mon Feb 20 15:09:50 on ttys000
+majaykenneh@Majays-iMac ~ % k get pod
+zsh: command not found: k
+majaykenneh@Majays-iMac ~ % alias k=kubectl
+majaykenneh@Majays-iMac ~ % k get pod      
+NAME                              READY   STATUS    RESTARTS   AGE
+edureka-purdue-779c7df4dd-94tfz   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-d2lz9   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-lfwxv   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-r4klh   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-zmhtg   1/1     Running   0          12m
+majaykenneh@Majays-iMac ~ % kubectl scale deployment edureka-purdue --replicas=6
+deployment.apps/edureka-purdue scaled
+majaykenneh@Majays-iMac ~ %                                                     
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % k get pod                                           
+NAME                              READY   STATUS    RESTARTS   AGE
+edureka-purdue-779c7df4dd-2v2ll   1/1     Running   0          9s
+edureka-purdue-779c7df4dd-94tfz   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-d2lz9   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-lfwxv   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-r4klh   1/1     Running   0          12m
+edureka-purdue-779c7df4dd-zmhtg   1/1     Running   0          12m
+majaykenneh@Majays-iMac ~ %                                                     
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % kubectl scale deployment edureka-purdue --replicas=3
+deployment.apps/edureka-purdue scaled
+majaykenneh@Majays-iMac ~ % k get pod                                           
+NAME                              READY   STATUS    RESTARTS   AGE
+edureka-purdue-779c7df4dd-d2lz9   1/1     Running   0          13m
+edureka-purdue-779c7df4dd-r4klh   1/1     Running   0          13m
+edureka-purdue-779c7df4dd-zmhtg   1/1     Running   0          13m
+majaykenneh@Majays-iMac ~ %          
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % kubectl scale deployment edureka-purdue --replicas=1
+deployment.apps/edureka-purdue scaled
+majaykenneh@Majays-iMac ~ % k get pod                                           
+NAME                              READY   STATUS    RESTARTS   AGE
+edureka-purdue-779c7df4dd-d2lz9   1/1     Running   0          13m
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % kubectl scale deployment edureka-purdue --replicas=6
+deployment.apps/edureka-purdue scaled
+majaykenneh@Majays-iMac ~ %                                                     
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % 
+majaykenneh@Majays-iMac ~ % k get pod                                           
+NAME                              READY   STATUS    RESTARTS   AGE
+edureka-purdue-779c7df4dd-5wr2x   1/1     Running   0          12s
+edureka-purdue-779c7df4dd-d2lz9   1/1     Running   0          14m
+edureka-purdue-779c7df4dd-f5jnd   1/1     Running   0          12s
+edureka-purdue-779c7df4dd-hv4t8   1/1     Running   0          12s
+edureka-purdue-779c7df4dd-t676w   1/1     Running   0          12s
+edureka-purdue-779c7df4dd-t8pp6   1/1     Running   0          12s
+majaykenneh@Majays-iMac ~ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
