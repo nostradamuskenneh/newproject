@@ -55,7 +55,7 @@ pipeline {
 		                pwd
 				ls
 				cd /$WORKSPACE
-			     # "ansible-playbook create_image_edureka.yml -i /etc/ansible/create_image_edureka.yml  --user ec2-user "
+			     # "ansible-playbook /etc/ansible/create_image_edureka.yml"
 				 docker build -t edu-project .
                 '''
             }
