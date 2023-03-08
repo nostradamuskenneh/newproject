@@ -18,15 +18,16 @@ spec:
       containers:
       - name: edureka-purdue
         image: oumarkenneh/edu-project-reka
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         readinessProbe:
-         # httpGet:
-         #   path: /healthz
-         #   port: 8080
-         # initialDelaySeconds: 5
-         # periodSeconds: 10
-      terminationGracePeriodSeconds: 30
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        terminationGracePeriodSeconds: 30
   strategy:
     type: RollingUpdate
     rollingUpdate:
